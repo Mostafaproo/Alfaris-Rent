@@ -67,7 +67,7 @@ a, a:focus, a:hover {
 }
 
 .middle-header {
-  background-color: #1c1c1c;
+  background-color: #9f2065;
   color: #fff;
   height: 100px;
   display: -webkit-box;
@@ -159,7 +159,7 @@ a, a:focus, a:hover {
   transition: all 0.4s ease-in-out;
 }
 .middle-contnet .nav-search .input-group-btn .btn-search:hover span {
-  color: #1c1c1c;
+  color: #9f2065;
 }
 .middle-contnet .other-links {
   -webkit-box-flex: 1;
