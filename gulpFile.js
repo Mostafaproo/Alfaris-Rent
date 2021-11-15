@@ -41,6 +41,26 @@ gulp.task("sass", function () {
         .pipe(livereload());
 });
 
+// css rtl task
+gulp.task("sass-rtl", function () {
+    return gulp
+      .src("./src/sass/rtl-style.scss")
+      .pipe(
+        sass({
+          outputStyle: "expanded",
+        })
+      )
+      .pipe(
+        autoprefixer({
+          overrideBrowserslist: ["last 2 versions"],
+          cascade: true,
+        })
+      )
+      .pipe(concat("rtl-style.css"))
+      .pipe(gulp.dest("dist/css"))
+      .pipe(livereload());
+  });
+
 // js task
 gulp.task("js", function () {
     return gulp
@@ -59,7 +79,7 @@ gulp.task("default", function () {
     })
     gulp.watch("./src/pug/**/*.pug", gulp.series("pug-en"));
     gulp.watch("./src/sass/**/*.scss", gulp.series("sass"));
-    // gulp.watch("./src/sass/**/*.scss", gulp.series("sass-rtl"));
+    gulp.watch("./src/sass/**/*.scss", gulp.series("sass-rtl"));
     gulp.watch("./src/js/**/*.js", gulp.series("js"));
     return;
 });
