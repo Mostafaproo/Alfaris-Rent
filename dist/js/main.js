@@ -16,3 +16,25 @@ $(document).ready(function () {
     },
   });
 });
+
+
+
+// Get the navbar
+var navbar = document.getElementById("navigation");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop +50;
+
+window.onscroll = function(){
+  if(window.scrollY > sticky){
+    navbar.classList.add("sticky")
+    $('.navbar-brand').css('display','block')
+  }
+  else {
+    navbar.classList.remove("sticky");
+    $('.navbar-brand').css('display','none')
+  }
+}
+
+
+
