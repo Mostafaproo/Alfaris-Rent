@@ -1,12 +1,10 @@
 $(document).ready(function () {
-  var swiper = new Swiper(".swiperHome", {
-    // Optional parameters
+  var swiper1  = new Swiper(".swiperHome", {
     direction: "horizontal",
     loop: true,
     speed: 400,
     spaceBetween: 0,
 
-    // If we need pagination
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -15,6 +13,29 @@ $(document).ready(function () {
       el: ".swiper-scrollbar",
     },
   });
+
+  var swiper2  = new Swiper("#swiper-categeroy", {
+    direction: "horizontal",
+    slidesPerView: 2.5,
+    loop: true,
+    speed: 400,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // // If we need pagination
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });
+
+
 
   var heights = [];
 
