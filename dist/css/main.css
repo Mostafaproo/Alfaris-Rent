@@ -490,8 +490,8 @@ a, a:focus, a:hover {
 }
 
 .swiper-slide {
-  height: 40em !important;
-  max-height: 40em !important;
+  height: 45em !important;
+  max-height: 45em !important;
   position: relative;
 }
 .swiper-slide img {
