@@ -82,3 +82,34 @@ window.onscroll = function () {
     $(".navbar-brand").css("display", "none");
   }
 };
+
+// Start Scroll Counter
+
+let numbers = document.querySelectorAll(".number");
+let counterSection = document.querySelector(".counter-section");
+let started =false;
+
+window.onscroll = function () {
+  if (window.scrollY >= counterSection.offsetTop -100) {
+    if(!started){
+      numbers.forEach((num) => {
+        startCount(num);
+      });
+
+    }
+    started = true
+  }
+};
+
+function startCount(el) {
+  let goal = el.dataset.goal;
+
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+
+// startCount(numbers[0])

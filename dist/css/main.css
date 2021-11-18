@@ -35,7 +35,7 @@ a, a:focus, a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: -1;
 }
 
@@ -723,5 +723,54 @@ a, a:focus, a:hover {
   .swiper-button-next,
 .swiper-button-prev {
     display: none;
+  }
+}
+.counter-section {
+  background-color: #9F2064;
+  padding: 40px 0;
+}
+
+.counter-box {
+  background-color: #fff;
+  padding: 10px;
+  color: #000;
+  border-radius: 5px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  height: 200px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.counter-box .counter-icon {
+  margin-bottom: 15px;
+}
+.counter-box .counter-icon i {
+  font-size: 24pt;
+}
+.counter-box .counter-number .number {
+  font-size: 28pt;
+  font-weight: bold;
+  color: #9F2064;
+}
+.counter-box .counter-text .text {
+  font-size: 14pt;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.counter-box .counter-divider {
+  margin: auto;
+}
+.counter-box .counter-divider span {
+  text-align: center;
+  margin: 10px auto;
+  width: 70px;
+  height: 4px;
+  background-color: #9F2064;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .counter-box {
+    margin-bottom: 40px;
   }
 }
