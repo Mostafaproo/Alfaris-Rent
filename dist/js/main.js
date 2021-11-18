@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var swiper1  = new Swiper(".swiperHome", {
+  var swiper1 = new Swiper(".swiperHome", {
     direction: "horizontal",
     loop: true,
     speed: 400,
@@ -14,15 +14,36 @@ $(document).ready(function () {
     },
   });
 
-  var swiper2  = new Swiper("#swiper-categeroy", {
+  var swiper2 = new Swiper("#swiper-categeroy", {
     direction: "horizontal",
     slidesPerView: 2.5,
     loop: true,
     speed: 400,
     spaceBetween: 10,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 1.5,
+        spaceBetween: 30,
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 1.2,
+        spaceBetween: 40,
+      },
+      992: {
+        slidesPerView: 2.5,
+        spaceBetween: 40,
+      },
     },
 
     // // If we need pagination
@@ -35,8 +56,6 @@ $(document).ready(function () {
     },
   });
 
-
-
   var heights = [];
 
   $(".elementor-element").each(function () {
@@ -46,11 +65,7 @@ $(document).ready(function () {
   var maxHeight = Math.max.apply(null, heights);
 
   $(".elementor-element").height(maxHeight);
-
-
-
 });
-
 
 // Get the navbar
 var navbar = document.getElementById("navigation");
