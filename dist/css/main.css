@@ -7,7 +7,6 @@
 
 body {
   font-family: "Cairo", sans-serif;
-  height: 4000px;
   background-color: #ffff;
 }
 
@@ -773,4 +772,12 @@ a, a:focus, a:hover {
   .counter-box {
     margin-bottom: 40px;
   }
+}
+.footer {
+  background: url("../images/main-slider/7.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }

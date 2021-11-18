@@ -16,10 +16,10 @@ $(document).ready(function () {
 
   var swiper2 = new Swiper("#swiper-categeroy", {
     direction: "horizontal",
-    slidesPerView: 2.5,
+    // slidesPerView: 2.5,
     loop: true,
     speed: 400,
-    spaceBetween: 10,
+    spaceBetween: 1,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -42,15 +42,9 @@ $(document).ready(function () {
       },
       992: {
         slidesPerView: 2.5,
-        spaceBetween: 40,
+        spaceBetween: 30,
       },
     },
-
-    // // If we need pagination
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
     scrollbar: {
       el: ".swiper-scrollbar",
     },
@@ -74,30 +68,38 @@ var navbar = document.getElementById("navigation");
 var sticky = navbar.offsetTop + 50;
 
 window.onscroll = function () {
-  if (window.scrollY > sticky) {
-    navbar.classList.add("sticky");
-    $(".navbar-brand").css("display", "block");
-  } else {
-    navbar.classList.remove("sticky");
-    $(".navbar-brand").css("display", "none");
-  }
+  // if (window.scrollY > sticky) {
+  //   navbar.classList.add("sticky");
+  //   $(".navbar-brand").css("display", "block");
+  // } else {
+  //   navbar.classList.remove("sticky");
+  //   $(".navbar-brand").css("display", "none");
+  // }
 };
 
 // Start Scroll Counter
 
 let numbers = document.querySelectorAll(".number");
 let counterSection = document.querySelector(".counter-section");
-let started =false;
+let started = false;
 
 window.onscroll = function () {
-  if (window.scrollY >= counterSection.offsetTop -100) {
-    if(!started){
+  if (window.scrollY >= counterSection.offsetTop - 200) {
+    if (!started) {
       numbers.forEach((num) => {
         startCount(num);
       });
-
     }
-    started = true
+    started = true;
+  }
+
+  // Sticky Navbar
+  if (window.scrollY > sticky) {
+    navbar.classList.add("sticky");
+    $(".navbar-brand").css("display", "block");
+  } else {
+    navbar.classList.remove("sticky");
+    $(".navbar-brand").css("display", "none");
   }
 };
 
@@ -111,5 +113,3 @@ function startCount(el) {
     }
   }, 2000 / goal);
 }
-
-// startCount(numbers[0])
