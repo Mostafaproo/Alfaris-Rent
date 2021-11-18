@@ -252,11 +252,10 @@ a, a:focus, a:hover {
   }
 }
 
-.navbar {
+.main-nav .navbar {
   background-color: #9F2064;
 }
-
-.sticky {
+.main-nav .sticky {
   position: sticky;
   top: 0;
   right: 0;
@@ -265,7 +264,6 @@ a, a:focus, a:hover {
   -webkit-animation: smoothScroll 1s forwards;
           animation: smoothScroll 1s forwards;
 }
-
 @-webkit-keyframes smoothScroll {
   0% {
     -webkit-transform: translateY(-40px);
@@ -276,7 +274,6 @@ a, a:focus, a:hover {
             transform: translateY(0px);
   }
 }
-
 @keyframes smoothScroll {
   0% {
     -webkit-transform: translateY(-40px);
@@ -287,35 +284,33 @@ a, a:focus, a:hover {
             transform: translateY(0px);
   }
 }
-.navbar-nav {
+.main-nav .navbar-nav {
   margin: auto;
   font-weight: 700;
 }
-
-.navbar-brand {
+.main-nav .navbar-brand {
   display: none;
 }
-.navbar-brand img {
+.main-nav .navbar-brand img {
   width: 100px;
   height: 100%;
 }
-
 @media (max-width: 992px) {
-  .navbar-brand {
+  .main-nav .navbar-brand {
     display: block !important;
   }
 }
-.nav-link {
+.main-nav .nav-link {
   color: #fff !important;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   position: relative;
   transition: all 0.4s ease-in-out;
 }
-.nav-link:hover {
+.main-nav .nav-link:hover {
   color: #1c1c1c !important;
 }
-.nav-link::before {
+.main-nav .nav-link::before {
   content: "";
   position: absolute;
   left: 0;
@@ -325,12 +320,12 @@ a, a:focus, a:hover {
   -webkit-transition: all 0.4s ease-in-out !important;
   transition: all 0.4s ease-in-out !important;
 }
-.nav-link:hover::before {
+.main-nav .nav-link:hover::before {
   color: #9F2064 !important;
   background-color: #1c1c1c !important;
   width: 100%;
 }
-.nav-link .active {
+.main-nav .nav-link .active {
   color: #9F2064 !important;
 }
 
@@ -773,6 +768,32 @@ a, a:focus, a:hover {
     margin-bottom: 40px;
   }
 }
+.members {
+  margin-bottom: 40px;
+}
+.members .nav-link {
+  padding: 15px;
+  border: 2px solid #ddd !important;
+  margin-bottom: 12px;
+  position: relative;
+}
+.members .nav-link.active {
+  background-color: #9F2064 !important;
+}
+.members .nav-link.active::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #9F2064;
+}
+.members .tab-content {
+  border: 2px solid #9F2064;
+  padding: 20px;
+  border-radius: 3px;
+}
+
 .footer {
   background: url("../images/main-slider/7.jpg") no-repeat;
   background-size: cover;
