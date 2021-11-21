@@ -2,6 +2,11 @@ $(document).ready(function () {
   var swiper1 = new Swiper(".swiperHome", {
     direction: "horizontal",
     loop: true,
+    effect: "fade",
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     speed: 400,
     spaceBetween: 0,
 
@@ -18,6 +23,10 @@ $(document).ready(function () {
     direction: "horizontal",
     // slidesPerView: 2.5,
     loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     speed: 400,
     spaceBetween: 1,
     navigation: {
@@ -61,27 +70,31 @@ $(document).ready(function () {
   $(".elementor-element").height(maxHeight);
 });
 
-// Get the navbar
-var navbar = document.getElementById("navigation");
+// // Get the navbar
+// var navbar = document.getElementById("navigation");
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop + 50;
+// // Get the offset position of the navbar
+// var sticky = navbar.offsetTop + 50;
 
-window.onscroll = function () {
-  // if (window.scrollY > sticky) {
-  //   navbar.classList.add("sticky");
-  //   $(".navbar-brand").css("display", "block");
-  // } else {
-  //   navbar.classList.remove("sticky");
-  //   $(".navbar-brand").css("display", "none");
-  // }
-};
+// window.onscroll = function () {
+//   if (window.scrollY > sticky) {
+//     navbar.classList.add("sticky");
+//     $(".navbar-brand").css("display", "block");
+//   } else {
+//     navbar.classList.remove("sticky");
+//     $(".navbar-brand").css("display", "none");
+//   }
+// };
 
 // Start Scroll Counter
 
 let numbers = document.querySelectorAll(".number");
 let counterSection = document.querySelector(".counter-section");
 let started = false;
+// Get the navbar
+var navbar = document.getElementById("navigation");
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop + 50;
 
 window.onscroll = function () {
   if (window.scrollY >= counterSection.offsetTop - 200) {
@@ -101,7 +114,7 @@ window.onscroll = function () {
     navbar.classList.remove("sticky");
     $(".navbar-brand").css("display", "none");
   }
-};
+};/* End Window Scroll */
 
 function startCount(el) {
   let goal = el.dataset.goal;
