@@ -126,3 +126,38 @@ function startCount(el) {
     }
   }, 2000 / goal);
 }
+
+
+// buttn to scroll top fucntion
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 80) {
+    $("#topBtn").fadeIn();
+  } else {
+    $("#topBtn").fadeOut();
+  }
+});
+// Animtion for scroll on the top
+$("#topBtn").click(function () {
+  $("html, body").animate(
+    {
+      scrollTop: 0,
+    },
+    800
+  );
+});
+
+
+// const currentLocation = location.href;
+// const menuItem = document.querySelectorAll("#fixed-item");
+// const menuLength = menuItem.length;
+// for (let i = 0; i < menuLength; i++) {
+//   if (menuItem[i].href === currentLocation) {
+//     menuItem[i].className = "activted notification";
+//   }
+// }
+
+
+window.onload = function () {
+  //hide the preloader
+  document.querySelector(".preloaders").style.display = "none";
+};
