@@ -107,11 +107,7 @@ a, a:focus, a:hover {
   width: 100%;
   height: 100%;
 }
-.preloaders .loaders {
-  border: 0px solid transparent;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+.preloaders .loaders img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -119,57 +115,6 @@ a, a:focus, a:hover {
           transform: translate(-50%, -50%);
 }
 
-.loaders::before {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.loaders:before,
-.loaders:after {
-  content: "";
-  border: 10px solid #9F2064;
-  border-radius: 50%;
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-animation: loader 2s linear infinite;
-          animation: loader 2s linear infinite;
-  opacity: 0;
-}
-
-@-webkit-keyframes loader {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0;
-  }
-}
-
-@keyframes loader {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0;
-  }
-}
 .top-bar {
   background-color: #f4f4f4;
   padding: 10px 0;
@@ -907,6 +852,12 @@ a, a:focus, a:hover {
 .members {
   margin-bottom: 40px;
 }
+.members .title {
+  margin-bottom: 50px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .members .nav-link {
   padding: 25px;
   border: 2px solid #ddd !important;
@@ -933,6 +884,14 @@ a, a:focus, a:hover {
   border-style: solid;
   border-color: transparent transparent transparent #9F2064;
 }
+@media (max-width: 768px) {
+  .members .nav-link.active::after {
+    top: auto;
+    right: 50% !important;
+    bottom: -20px !important;
+    border-color: #9F2064 transparent transparent transparent;
+  }
+}
 .members .members-content {
   border: 2px solid #9F2064;
   padding: 20px;
@@ -957,6 +916,7 @@ a, a:focus, a:hover {
 .subscribe-section h2 {
   font-weight: bold;
   text-transform: uppercase;
+  color: #000000;
 }
 .subscribe-section p {
   max-width: 800px;
@@ -984,14 +944,16 @@ a, a:focus, a:hover {
   border: none;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  border: 1px solid transparent;
   background-color: #9F2064;
   color: #ffffff;
   font-size: 18pt;
   text-transform: uppercase;
 }
 .subscribe-section .form-subscribe .btn-submit:hover {
-  background-color: #000000;
+  background-color: #ffffff;
   color: #9F2064;
+  border: 1px solid #9F2064;
 }
 @media (max-width: 768px) {
   .subscribe-section .form-subscribe .btn-submit {
