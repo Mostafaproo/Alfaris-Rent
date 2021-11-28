@@ -64,7 +64,7 @@ a, a:focus, a:hover {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f99ffbd;
+  background: #1c1c1c;
 }
 
 /* Scroll Top */
@@ -391,12 +391,12 @@ a, a:focus, a:hover {
   transition: all 0.4s ease-in-out !important;
 }
 .main-nav .nav-link:hover::before {
-  color: #9F2064 !important;
   background-color: #1c1c1c !important;
   width: 100%;
 }
-.main-nav .nav-link .active {
-  color: #9F2064 !important;
+
+.activated {
+  color: #1c1c1c !important;
 }
 
 .main-slider {
@@ -960,6 +960,471 @@ a, a:focus, a:hover {
     width: auto;
     font-size: initial;
     padding: 0 10px;
+  }
+}
+
+.top-bar {
+  background-color: #f4f4f4;
+  padding: 10px 0;
+  color: #333;
+  font-size: 11pt;
+}
+.top-bar .header-topbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .top-bar .header-topbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.top-bar .box1-topbar,
+.top-bar .box2-topbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.top-bar .email-link {
+  margin-right: 10px;
+}
+.top-bar .social-topbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.top-bar .social-topbar li {
+  padding: 0 5px;
+}
+
+.middle-header {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.middle-contnet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 768px) {
+  .middle-contnet {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.middle-contnet .brand {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+.middle-contnet .brand img {
+  width: 150px;
+}
+@media (max-width: 992px) {
+  .middle-contnet .brand {
+    display: none;
+  }
+}
+.middle-contnet .phone-menu {
+  position: relative;
+}
+.middle-contnet .phone-menu .icon, .middle-contnet .phone-menu .phone-menu-info {
+  display: inline-block;
+  padding: 5px;
+}
+.middle-contnet .phone-menu .icon {
+  vertical-align: middle;
+}
+.middle-contnet .phone-menu .icon i {
+  font-size: 38pt;
+  color: #9F2064;
+}
+.middle-contnet .phone-menu .phone-menu-info {
+  vertical-align: middle;
+}
+.middle-contnet .phone-menu .phone-menu-info .call:hover {
+  color: #9F2064;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+@media (max-width: 992px) {
+  .middle-contnet .phone-menu {
+    width: 100%;
+  }
+}
+.middle-contnet .nav-search {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  position: relative;
+  padding: 0 20px;
+}
+.middle-contnet .nav-search input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  padding: 0 10px;
+  border: none;
+}
+.middle-contnet .nav-search .input-group-btn {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  -webkit-transform: skewX(334deg);
+          transform: skewX(334deg);
+}
+.middle-contnet .nav-search .input-group-btn .btn-search {
+  width: 60px;
+  height: 40px;
+  border: none;
+  background-color: #9F2064;
+  color: #fff;
+  outline: none;
+  -webkit-transform: scaleX(17deg);
+          transform: scaleX(17deg);
+  -webkit-box-shadow: 5px 0 0 0 #555;
+          box-shadow: 5px 0 0 0 #555;
+}
+.middle-contnet .nav-search .input-group-btn .btn-search span {
+  -webkit-transform: skewX(14deg);
+          transform: skewX(14deg);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.middle-contnet .nav-search .input-group-btn .btn-search:hover span {
+  color: #1c1c1c;
+}
+@media (max-width: 992px) {
+  .middle-contnet .nav-search {
+    width: 100%;
+  }
+}
+.middle-contnet .other-links {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.middle-contnet .other-links ul {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.middle-contnet .other-links ul li {
+  border: 1px solid #fff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.middle-contnet .other-links ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45px;
+  height: 45px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.middle-contnet .other-links ul li:hover a {
+  color: #9F2064;
+}
+@media (max-width: 992px) {
+  .middle-contnet .other-links {
+    display: none;
+  }
+}
+
+.main-nav .navbar {
+  background-color: #9F2064;
+}
+.main-nav .sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-animation: smoothScroll 1s forwards;
+          animation: smoothScroll 1s forwards;
+}
+@keyframes smoothScroll {
+  0% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+.main-nav .navbar-nav {
+  margin: auto;
+  font-weight: 700;
+}
+.main-nav .navbar-brand {
+  display: none;
+}
+.main-nav .navbar-brand img {
+  width: 100px;
+  height: 100%;
+}
+@media (max-width: 992px) {
+  .main-nav .navbar-brand {
+    display: block !important;
+  }
+}
+.main-nav .nav-link {
+  color: #fff !important;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.main-nav .nav-link:hover {
+  color: #1c1c1c !important;
+}
+.main-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  -webkit-transition: all 0.4s ease-in-out !important;
+  transition: all 0.4s ease-in-out !important;
+}
+.main-nav .nav-link:hover::before {
+  background-color: #1c1c1c !important;
+  width: 100%;
+}
+
+.activated {
+  color: #1c1c1c !important;
+}
+
+.main-slider {
+  background-color: #ddd;
+  position: relative;
+}
+
+.content-slider {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  z-index: 22;
+}
+
+.caption {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.slider-title {
+  font-size: 72px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .slider-title {
+    font-size: 22pt;
+  }
+}
+.rental-search {
+  background-color: rgba(20, 24, 28, 0.6);
+  max-width: 900px;
+  margin: auto;
+}
+.rental-search .rental-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #14181c;
+  color: #fff;
+  padding: 5px 20px;
+  position: relative;
+}
+.rental-search .rental-title h2 {
+  font-size: 18pt;
+  text-transform: capitalize;
+}
+@media (max-width: 768px) {
+  .rental-search .rental-title h2 {
+    font-size: 12pt;
+    font-weight: bold;
+  }
+  .rental-search .rental-title i {
+    font-size: 15pt !important;
+  }
+}
+.rental-search .rental-title i {
+  font-size: 22pt;
+}
+.rental-search .rental-form {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.rental-search .pick-up {
+  position: relative;
+  margin-bottom: 15px;
+}
+.rental-search .pick-up label {
+  display: block;
+}
+.rental-search .pick-up .select-input-form {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  height: 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+.rental-search .pick-up .select-input-form option {
+  background-color: #14181c;
+  margin-top: 5px;
+  position: absolute;
+  top: 15px;
+}
+.rental-search .pick-up .select-input-form option:hover {
+  background-color: #9F2064;
+}
+.rental-search .pick-up .from-control-icon {
+  position: absolute;
+  right: 0;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.rental-search .pick-up input::-webkit-calendar-picker-indicator {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.rental-search .advanced-option {
+  padding: 20px;
+  border-top: solid 1px rgba(255, 255, 255, 0.35);
+  line-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.rental-search .advanced-option a {
+  text-decoration: underline;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.rental-search .advanced-option a:hover {
+  color: #9F2064;
+}
+.rental-search .advanced-option .finde-car {
+  padding: 3px 50px;
+  font-size: 18pt;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: #9F2064;
+  border-radius: 3px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.rental-search .advanced-option .finde-car:hover {
+  background-color: #fff;
+  color: #9F2064;
+}
+@media (max-width: 768px) {
+  .rental-search .advanced-option {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+}
+
+.main-slider .swiper-slide {
+  height: 50em !important;
+  max-height: 50em !important;
+  position: relative;
+}
+.main-slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.main-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 0 !important;
+  -webkit-transform: rotate(45deg) !important;
+          transform: rotate(45deg) !important;
+  background-color: #1c1c1c !important;
+  opacity: 1;
+}
+.main-slider .swiper-pagination-bullet-active {
+  background-color: #9F2064 !important;
+}
+@media (max-width: 768px) {
+  .main-slider .swiper-pagination-bullet {
+    display: none;
   }
 }
 
