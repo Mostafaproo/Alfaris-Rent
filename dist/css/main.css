@@ -592,7 +592,7 @@ a, a:focus, a:hover {
 
 .welcome-section .section-caption {
   font-size: 17px;
-  color: #7a7a7a;
+  color: #767676;
   max-width: 800px;
   margin: 40px auto;
   line-height: 2;
@@ -865,11 +865,25 @@ a, a:focus, a:hover {
   position: relative;
 }
 @media (max-width: 768px) {
+  .members .nav {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .members .flex-column {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    overflow-y: auto !important;
+  }
+  .members ::-webkit-scrollbar {
+    width: 5px !important;
+    height: 1px;
+  }
   .members .nav-link {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    padding: 10px 50px !important;
+    margin-bottom: 12px;
+    border: none !important;
   }
 }
 .members .nav-link.active {
