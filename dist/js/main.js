@@ -146,7 +146,7 @@ $(document).ready(function () {
   });
 });
 
-// // Get the navbar
+// Get the navbar
 // var navbar = document.getElementById("navigation");
 
 // // Get the offset position of the navbar
