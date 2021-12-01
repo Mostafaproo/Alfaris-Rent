@@ -30,6 +30,8 @@ a, a:focus, a:hover {
 
 .activated {
   color: #1c1c1c !important;
+  padding: 0.5rem 1rem;
+  display: block;
 }
 
 .overlay {
@@ -444,7 +446,7 @@ a, a:focus, a:hover {
   }
 }
 .main-nav .nav-item {
-  padding: 10px 0;
+  padding: 0;
 }
 .main-nav .nav-link {
   color: #fff !important;
@@ -452,7 +454,7 @@ a, a:focus, a:hover {
   transition: all 0.4s ease-in-out;
   position: relative;
   transition: all 0.4s ease-in-out;
-  padding: 0 20px !important;
+  margin: 0 10px !important;
 }
 .main-nav .nav-link:hover {
   color: #1c1c1c !important;
@@ -1362,7 +1364,7 @@ a, a:focus, a:hover {
   }
 }
 .main-nav .nav-item {
-  padding: 10px 0;
+  padding: 0;
 }
 .main-nav .nav-link {
   color: #fff !important;
@@ -1370,7 +1372,7 @@ a, a:focus, a:hover {
   transition: all 0.4s ease-in-out;
   position: relative;
   transition: all 0.4s ease-in-out;
-  padding: 0 20px !important;
+  margin: 0 10px !important;
 }
 .main-nav .nav-link:hover {
   color: #1c1c1c !important;
