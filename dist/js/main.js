@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $(function () {
     var swiper1 = new Swiper(".swiperHome", {
       direction: "horizontal",
       loop: true,
@@ -59,7 +58,7 @@ $(document).ready(function () {
         el: ".swiper-scrollbar",
       },
     });
-  });
+ 
 
   var heights = [];
 
