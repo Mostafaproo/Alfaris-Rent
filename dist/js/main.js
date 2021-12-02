@@ -1,120 +1,64 @@
-function startCount(el) {
-  let goal = el.dataset.goal;
-
-  let count = setInterval(() => {
-    el.textContent++;
-    if (el.textContent == goal) {
-      clearInterval(count);
-    }
-  }, 2000 / goal);
-}
-
-const currentLocation = location.href;
-const menuItem = document.querySelectorAll(" a");
-const menuLength = menuItem.length;
-for (let i = 0; i < menuLength; i++) {
-  if (menuItem[i].href === currentLocation) {
-    menuItem[i].className = "activated"
-  }
-}
-
-window.onload = function () {
-  //hide the preloader
-  document.querySelector(".preloaders").style.display = "none";
-};
-
-
-// Start Scroll Counter
-
-let numbers = document.querySelectorAll(".number");
-let counterSection = document.querySelector(".counter-section");
-let started = false;
-// Get the navbar
-var navbar = document.getElementById("navigation");
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop + 50;
-
-window.onscroll = function () {
-  // Sticky Navbar
-  if (window.scrollY > sticky) {
-    navbar.classList.add("sticky");
-    $(".navbar-brand").css("display", "block");
-  } else {
-    navbar.classList.remove("sticky");
-    $(".navbar-brand").css("display", "none");
-  }
-
-  if (window.scrollY >= counterSection.offsetTop - 200) {
-    if (!started) {
-      numbers.forEach((num) => {
-        startCount(num);
-      });
-    }
-    started = true;
-  }
-}; /* End Window Scroll */
-
-
-
 $(document).ready(function () {
-  var swiper1 = new Swiper(".swiperHome", {
-    direction: "horizontal",
-    loop: true,
-    effect: "fade",
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    speed: 400,
-    spaceBetween: 0,
+  $(function () {
+    var swiper1 = new Swiper(".swiperHome", {
+      direction: "horizontal",
+      loop: true,
+      effect: "fade",
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 400,
+      spaceBetween: 0,
 
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-  });
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
 
-  var swiper2 = new Swiper("#swiper-categeroy", {
-    direction: "horizontal",
-    // slidesPerView: 2.5,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    speed: 400,
-    spaceBetween: 1,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
+    var swiper2 = new Swiper("#swiper-categeroy", {
+      direction: "horizontal",
+      // slidesPerView: 2.5,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
       },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 1.5,
-        spaceBetween: 30,
+      speed: 400,
+      spaceBetween: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 1.2,
-        spaceBetween: 40,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 1.5,
+          spaceBetween: 30,
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 1.2,
+          spaceBetween: 40,
+        },
+        992: {
+          slidesPerView: 2.5,
+          spaceBetween: 30,
+        },
       },
-      992: {
-        slidesPerView: 2.5,
-        spaceBetween: 30,
+      scrollbar: {
+        el: ".swiper-scrollbar",
       },
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
+    });
   });
 
   var heights = [];
@@ -146,6 +90,61 @@ $(document).ready(function () {
   });
 });
 
+function startCount(el) {
+  let goal = el.dataset.goal;
+
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll(" a");
+const menuLength = menuItem.length;
+for (let i = 0; i < menuLength; i++) {
+  if (menuItem[i].href === currentLocation) {
+    menuItem[i].className = "activated";
+  }
+}
+
+window.onload = function () {
+  //hide the preloader
+  document.querySelector(".preloaders").style.display = "none";
+};
+
+// Start Scroll Counter
+
+let numbers = document.querySelectorAll(".number");
+let counterSection = document.querySelector(".counter-section");
+let started = false;
+// Get the navbar
+var navbar = document.getElementById("navigation");
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop + 50;
+
+window.onscroll = function () {
+  // Sticky Navbar
+  if (window.scrollY > sticky) {
+    navbar.classList.add("sticky");
+    $(".navbar-brand").css("display", "block");
+  } else {
+    navbar.classList.remove("sticky");
+    $(".navbar-brand").css("display", "none");
+  }
+
+  if (window.scrollY >= counterSection.offsetTop - 200) {
+    if (!started) {
+      numbers.forEach((num) => {
+        startCount(num);
+      });
+    }
+    started = true;
+  }
+}; /* End Window Scroll */
+
 // Get the navbar
 // var navbar = document.getElementById("navigation");
 
@@ -161,4 +160,3 @@ $(document).ready(function () {
 //     $(".navbar-brand").css("display", "none");
 //   }
 // };
-
